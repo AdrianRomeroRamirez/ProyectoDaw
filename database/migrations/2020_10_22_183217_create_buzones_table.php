@@ -13,9 +13,9 @@ class CreateBuzonesTable extends Migration
      */
     public function up()
     {
-        Schema::create('buzones', function (Blueprint $table) {
+        Schema::create('buzons', function (Blueprint $table) {
             $table->id();
-            $table->foreignId("editorial_id")->references("id")->on("editoriales");
+            $table->foreignId("editorial_id")->references("id")->on("editorials");
             $table->foreignId("libro_id")->references("id")->on("libros");
             $table->foreignId("registrado_id")->references("id")->on("registrados");
         });
@@ -28,6 +28,6 @@ class CreateBuzonesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('buzones');
+        Schema::dropIfExists('buzons');
     }
 }

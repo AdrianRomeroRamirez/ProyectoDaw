@@ -19,7 +19,7 @@ class CreateUsuariosTable extends Migration
             $table->String("telefono", 9);
             $table->String("nom_completo", 60);
             $table->String("password", 60);
-            $table->foreignId("rol_id")->references("id")->on("roles");
+            $table->foreignId("rol_id")->references("id")->on("rols");
         });
     }
 

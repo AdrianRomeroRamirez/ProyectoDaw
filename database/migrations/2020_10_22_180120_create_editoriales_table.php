@@ -13,7 +13,7 @@ class CreateEditorialesTable extends Migration
      */
     public function up()
     {
-        Schema::create('editoriales', function (Blueprint $table) {
+        Schema::create('editorials', function (Blueprint $table) {
             $table->id();
             $table->String("nif", 8)->unique();
             $table->foreignId("usuario_id")->references("id")->on("usuarios");
@@ -27,6 +27,6 @@ class CreateEditorialesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('editoriales');
+        Schema::dropIfExists('editorials');
     }
 }

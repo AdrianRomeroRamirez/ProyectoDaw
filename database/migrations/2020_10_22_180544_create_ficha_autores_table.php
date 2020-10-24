@@ -13,11 +13,11 @@ class CreateFichaAutoresTable extends Migration
      */
     public function up()
     {
-        Schema::create('ficha_autores', function (Blueprint $table) {
+        Schema::create('ficha_autors', function (Blueprint $table) {
             $table->id();
             $table->text("biografia");
             $table->String("nombre", 60)->unique();
-            $table->foreignId("editorial_id")->references("id")->on("editoriales");
+            $table->foreignId("editorial_id")->references("id")->on("editorials");
         });
     }
 
@@ -28,6 +28,6 @@ class CreateFichaAutoresTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ficha_autores');
+        Schema::dropIfExists('ficha_autors');
     }
 }

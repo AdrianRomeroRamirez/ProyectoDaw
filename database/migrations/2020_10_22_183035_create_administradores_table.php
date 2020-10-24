@@ -13,7 +13,7 @@ class CreateAdministradoresTable extends Migration
      */
     public function up()
     {
-        Schema::create('administradores', function (Blueprint $table) {
+        Schema::create('administradors', function (Blueprint $table) {
             $table->id();
             $table->String("nom_usuario", 20)->unique;
             $table->foreignId("usuario_id")->references("id")->on("usuarios");
@@ -27,6 +27,6 @@ class CreateAdministradoresTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('administradores');
+        Schema::dropIfExists('administradors');
     }
 }

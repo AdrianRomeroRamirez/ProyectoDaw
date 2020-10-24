@@ -21,8 +21,8 @@ class CreateLibrosTable extends Migration
             $table->String("portada", 150);
             $table->text("sinopsis");
             $table->String("categoria", 20);
-            $table->foreignId("editorial_id")->references("id")->on("editoriales");
-            $table->foreignId("autor_id")->references("id")->on("ficha_autores");
+            $table->foreignId("editorial_id")->references("id")->on("editorials");
+            $table->foreignId("ficha_autor_id")->references("id")->on("ficha_autors");
         });
     }
 
